@@ -1,0 +1,192 @@
+                                        Basic Commands
+
+	1-> pwd(path of current working directory) - It find out the path of current working 							     directory.
+						     usage:
+							   pwd 
+	
+	2-> cd (change Directory)- to navigate through the linux files and directory.it require 				   full path or the name of the directory,depending on the current 					   working directory we are in.
+				   usage:
+					cd directory name || path of directory
+				   There are some shortcuts to help you navigate quickly:
+
+					a-> cd .. to move one directory up.
+					b-> cd to go straight to the home folder
+					c-> cd- to move to your previous directory
+	
+	3-> ls(list command) - used to view the contents of a directory.
+				usage:
+					ls directory name || directory path
+			       There are variations you can use with the ls command:
+				a-> ls -R will list all the files in the sub-directories as well.
+				b-> ls -a will show the hidden files.
+				c-> ls -al will list the files and directories with detailed 					    information like the permissions, size etc.
+
+
+	4-> cat (concatenate command) - used to list the contents of a file on the standard output.
+					usage cat filename.extension
+					other ways to use the cat command:
+						a-> cat > filename creates a new file
+						b-> cat filename1 filename2>filename3 joins two 						    files (1 and 2) and stores the output of them 							    in a new file (3)
+						c->to convert a file to upper or lower case use, 							   cat filename | tr a-z A-Z >output.txt
+						usage:
+							 cat>con.txt
+							 cat con.txt
+							 cat con.txt con2.txt>output.txt
+							 
+
+	5-> cp (copy command) - Use the cp command to copy files from the current directory to a 					different directory.
+				usage:
+					 cp copy.txt ../Downloads/ 
+
+	6-> mv (move command) - a)use of the mv command is to move files, although it can also be 					  used to rename files.
+				b)To rename files, the Linux command is mv oldname.ext newname.ext
+
+
+				usage:
+					mv test.txt ../Documents/
+					
+
+	7-> mkdir (make directory command) - use to make a new directory.
+						usage:
+							mkdir vikram
+
+						There are extra mkdir commands as well:
+						a-> To generate a new directory inside another 							    directory, use this Linux basic command-
+							mkdir vikram/testing
+
+	8-> rmdir (remove directory) - to delete a directory, use the rmdir command. However, 					       rmdir only allows you to delete empty directories.
+					usage:
+						rmdir testing/
+
+	9-> rm (remove command) - used to delete directories and the contents within them.
+					usage:
+						rm -r /remove/testing/ 							rm test.txt
+
+	10-> touch - allows to create a blank new file through the Linux command line.
+			usage:
+				touch index.html
+
+	11-> find - search for files and directories with in a given directory.
+			usage:
+				find ./touch -name test.txt
+
+	12-> grep - use to search through all the text in a given file
+			usage:
+				grep world grep.txt
+
+	13-> sudo(SuperUser Do) - enables to perform tasks that require administrative or root 					  permissions.
+					usage:
+						sudo dpkg -i code_1.54.1-1614898113_amd64.deb
+
+	14-> df  - to get a report on the system’s disk space usage, shown in percentage and KBs.
+			usage:
+				df 
+				df -m
+
+	15-> du(Disk Usage) - to check how much space a file or a directory takes.
+				usage:
+					du filename||path of file (depending on the current 									   directory)
+					du -h filename||path of file (depending on the current 									      directory)
+	16-> head - used to view the first lines of any text file. By default, it will show the 		    first ten lines, but you can change this number to your liking.
+
+			usage:
+				head -n 2 ./basic\ commands/head/head.txt 
+
+	17-> tail - This one has a similar function to the head command, but instead of showing 		    the first lines, the tail command will display the last ten lines of a text 		    file.
+				usage:
+					tail -n 2 ./basic\ commands/head/head.txt
+
+	18-> diff(Difference) - compares the contents of two files line by line. After analyzing 					the files, it will output the lines that do not match.
+
+					usage:
+						diff test.txt test1.txt
+
+	19-> tar - used to archive multiple files into a tarball.
+		   also use to do many function with archive file.
+			usage:
+
+			 tar -cf archive.tar diff grep //create archive.tar file having deff and 								 grep folder
+			 tar -tvf archive.tar // list all the file in archive file verbosely
+			 tar xf archive.tar //extract all the files in archive file
+			 tar -rf archive.tar head // append file to the end of an archive
+
+	20-> chmod - used to change the read, write, and execute permissions of files and 			     directories.
+				usage:
+					chmod u=rwx,g=rx,o=r head.txt
+			 
+	21-> chmod - chown command enables you to change or transfer the ownership of a file to 		     the specified username.
+			usage:
+				chown vikram ./Desktop/basic\ command/head/head.txt
+
+	22-> jobs -  display all current jobs along with their statuses.jobs are processes started 			     by shell.
+
+				usage:
+					jobs
+
+	23-> kill - terminate a unresponsive program manually by using kill command.it send the 		    certain signal to app and instruct the app to terminate itself.
+
+			usually used two signals are:
+				a-> SIGTERM - requests a program to stop running and gives it some 							time to save all of its progress.
+				b-> SIGKILL - forces programs to stop immediately. Unsaved 						      progress will be lost.
+
+				usage:
+					kill [signal option] PID //PID of a process can be found 						by using ps(process name) ux
+
+	24-> ping - check connectivity status to a server.
+			usage:
+				ping google.com
+
+	25-> wget - download files from the internet with the help of the wget command.
+
+			usage:
+				wget https://unsplash.com/photos/hTB6iloRoLg/download?force=true
+				wget -b https://unsplash.com/photos/hTB6iloRoLg/download?force=true
+				// download in background
+
+	26-> uname - print detailed information about your Linux system like the machine name, 			     operating system, kernel, and so on.
+
+			usage:
+				uname				
+				uname -p
+				uname -r etc...
+
+	27-> history ->  review the commands entered before.
+				usage:
+					history
+
+	28-> man(manual) -> show the manual instruction of the command.
+
+				usage:
+					man grep
+
+	29-> echo -> used to move some data into a file.
+			usage:
+				echo my name is vikram>>test.txt
+
+	30-> zip -> to compress your files into a zip archive, and use the unzip command to 			    extract the zipped files from a zip archive.
+			usage:
+				zip concat.zip ./concat
+				unzip concat.zip
+
+	31-> useradd -> useradd is used to create a new user.
+			USAGE:
+				useradd vikram
+
+	32-> userdel -> userdel is use to delete the user.
+				usage:
+					userdel vikram
+
+					
+
+				 
+			 
+
+
+
+
+	
+
+
+
+
+					
